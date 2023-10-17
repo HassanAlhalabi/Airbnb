@@ -1,13 +1,13 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Navbar from "./shared/navbar";
+import Navbar from "./components/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "AIRBNB CLONE",
-  description: "AIRBNB Tickets System Manageing",
+  description: "AIRBNB Tickets Management System",
 };
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
-        {children}
+        <main className="pt-[200px]">{children}</main>
       </body>
     </html>
   );
